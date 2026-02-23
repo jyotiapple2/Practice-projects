@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+          * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #020617;
+      }
+      .lodar {
+        box-shadow:
+          0 0 20px #5366e7,        /* Inner sharp glow */
+          0 0 40px #5366e7,        /* Mid-range glow */
+          0 0 80px #5366e7,        /* Large soft bloom */
+          0 0 120px rgba(83, 102, 231, 0.5);
+      }
+      .lodar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 17rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        background-color: #020617;
+      }
+      .lodar::after {
+        content: "";
+        position: absolute;
+        top: -2.5rem;
+        left: 8.5rem;
+        width: 8rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        background-color: rgb(83, 102, 231);
+        box-shadow:
+          0 0 20px #5366e7,        /* Inner sharp glow */
+          0 0 40px #5366e7,        /* Mid-range glow */
+          0 0 80px #5366e7,        /* Large soft bloom */
+          0 0 120px rgba(83, 102, 231, 0.5);
+      }
+      .lodar {
+        width: 20rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        background-color: rgb(83, 102, 231);
+        position: relative;
+        animation: rotate 2s linear infinite;
+      }
+      @keyframes rotate {
+        100% {
+          rotate: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lodar"></div>
+  </body>
+</html>
